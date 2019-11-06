@@ -1,41 +1,41 @@
 {
   "_args": [
     [
-      "react-native-swipe-list-view@1.5.0",
+      "react-native-swipe-list-view1@1.0.0",
       "F:\\App2\\App"
     ]
   ],
-  "_from": "react-native-swipe-list-view@1.5.0",
-  "_id": "react-native-swipe-list-view@1.5.0",
+  "_from": "react-native-swipe-list-view1@1.0.0",
+  "_id": "react-native-swipe-list-view1@1.0.0",
   "_inBundle": false,
   "_integrity": "sha1-wZfJr+IYid5o3y9jp90BYutvxBE=",
-  "_location": "/react-native-swipe-list-view",
+  "_location": "/react-native-swipe-list-view1",
   "_phantomChildren": {},
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "react-native-swipe-list-view@1.5.0",
-    "name": "react-native-swipe-list-view",
-    "escapedName": "react-native-swipe-list-view",
-    "rawSpec": "1.5.0",
+    "raw": "react-native-swipe-list-view1@1.0.0",
+    "name": "react-native-swipe-list-view1",
+    "escapedName": "react-native-swipe-list-view1",
+    "rawSpec": "1.0.0",
     "saveSpec": null,
-    "fetchSpec": "1.5.0"
+    "fetchSpec": "1.0.0"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "http://registry.npm.taobao.org/react-native-swipe-list-view/download/react-native-swipe-list-view-1.5.0.tgz",
-  "_spec": "1.5.0",
+  "_resolved": "http://registry.npm.taobao.org/react-native-swipe-list-view1/download/react-native-swipe-list-view1-1.0.0.tgz",
+  "_spec": "1.0.0",
   "_where": "F:\\App2\\App",
   "author": {
-    "name": "Jesse Sessler",
-    "email": "jesse.sessler@gmail.com"
+    "name": "Demon",
+    "email": "431910864@gmail.com"
   },
   "bugs": {
-    "url": "https://github.com/jemise111/react-native-swipe-list-view/issues"
+    "url": "https://github.com/jemise111/react-native-swipe-list-view1/issues"
   },
   "description": "A ListView with rows that swipe open and closed.",
-  "homepage": "https://github.com/jemise111/react-native-swipe-list-view#readme",
+  "homepage": "https://github.com/jemise111/react-native-swipe-list-view1#readme",
   "keywords": [
     "react",
     "react-native",
@@ -48,7 +48,7 @@
   ],
   "license": "MIT",
   "main": "lib/index.js",
-  "name": "react-native-swipe-list-view",
+  "name": "react-native-swipe-list-view1",
   "peerDependencies": {
     "react": ">=0.14.8",
     "react-native": ">=0.23.1",
@@ -56,11 +56,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jemise111/react-native-swipe-list-view.git"
+    "url": "git+https://github.com/431910864/react-native-swipe-list-view1.git"
   },
   "scripts": {
     "dev": "node bin/dev.js && cd SwipeListExample && npm run start",
     "start": "node_modules/react-native/packager/packager.sh"
   },
-  "version": "1.5.0"
+  "version": "1.0.0"
 }
