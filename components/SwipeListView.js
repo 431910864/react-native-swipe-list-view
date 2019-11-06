@@ -36,6 +36,9 @@ class SwipeListView extends Component {
 				onContentSizeChange: (w, h) => this.onContentSizeChange(w, h)
 			}
 		}
+		this.state = {
+			data: [],
+		}
 	}
 
 	setScrollEnabled(enable) {
@@ -213,8 +216,44 @@ class SwipeListView extends Component {
 		return this.renderCell(Component, HiddenComponent, key, item, shouldPreviewRow);
 	}
 
+	getList(list) {
+		if (!list || list.length <= 0) return [];
+		let newlist = [];
+		list.map((item, index) => {
+			item.key = Number(index) + 1;
+			if (item) newlist.push({ ...item });
+			return item;
+		});
+		return newlist;
+	}
+
+	refingData(list) {
+		const { SwipeListView } = this;
+		if (!this.isSetState) {
+			this.isSetState = true;
+			this.setState({
+				data: this.getList(list),
+			}, () => {
+				this.isSetState = false;
+			});
+		}
+	}
+
+	removeItem(index) {
+		this.safeCloseOpenRow();
+		let list = this.props.data;
+		list.splice(index, 1);
+		setTimeout(() => {
+			this.setState({
+				// eslint-disable-next-line no-underscore-dangle
+				data: list,
+			});
+		}, 300)
+	}
+
 	render() {
 		const { useFlatList, useSectionList, renderListView, ...props } = this.props;
+		const { data } = this.state;
 
 		if (renderListView) {
 			return renderListView(
@@ -253,6 +292,7 @@ class SwipeListView extends Component {
 			<ListView
 				{...props}
 				{...this.listViewProps}
+				data={data}
 				ref={ c => this.setRefs(c) }
 				onScroll={ e => this.onScroll(e) }
 				renderRow={(rowData, secId, rowId) => this.renderRow(rowData, secId, rowId, this._rows)}
